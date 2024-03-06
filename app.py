@@ -20,7 +20,7 @@ data_horas_disponiveis = [
     datetime(2024,3, 9, 12, 30 ),
     datetime(2024,3, 9, 13, 0 )
 ]
-@app.route('/webhook', methods= ['POST'])
+@app.route('/webhook', methods= ['GET','POST'])
 def webhook () : 
     incoming_message = request.values.get( 'Body','' )
     response = process_message(incoming_message)
